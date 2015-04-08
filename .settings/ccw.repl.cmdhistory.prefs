@@ -1,0 +1,2 @@
+cmdhistory=["a" "(search abc)" "entitie-body-json" "(def input-show-feld (JOptionPane/showInputDialog\\r\\n    nil \\"Please write the word to search\:\\" \\"WikiData\\"\\r\\n    JOptionPane/INFORMATION_MESSAGE))" "<type clojure code here>" "clear-agent-errors" "(def view (JOptionPane/showInputDialog nil \\"Please choose a View\\" \\"Wikidata\\" JOptionPane/QUESTION_MESSAGE (to-array {\\"Console\\" \\"GUI\\"}) \\"Console\\"))" "view" "<type clojure code here>"]
+eclipse.preferences.version=1
