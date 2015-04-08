@@ -1,4 +1,4 @@
-(ns zugriff-wikidata.core
+(ns clj-wikidata.core
    (:require [clj-http.client :as client]
              [clojure.data.json :as json]))
 
