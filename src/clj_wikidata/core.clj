@@ -1,3 +1,8 @@
+;; Anwendung zum Zugriff auf Wikidata
+;;
+;;Author Arnold Andiek Email:arnold.andiek@mni.thm.de
+;;Author Dieudonne Timma Meyatchie Email:dieudonne.timma.meyatchie@mni.thm.de
+;;
 (ns clj-wikidata.core
    (:require [clj-http.client :as client]
              [clojure.data.json :as json]))
@@ -207,11 +212,14 @@
     ))
 
 ;Speichern eine Instanz von der Klasse GridBagConstraints
+;;quelle: http://stuartsierra.com/2010/01/05/taming-the-gridbaglayout
 (def c (GridBagConstraints.))
 (set! (. c gridx) 1)
 (set! (. c gridy) GridBagConstraints/RELATIVE)
 
 ;;Der Macro set-grid positionniert ein Element im einem Gridlayout
+;;quelle: http://stuartsierra.com/2010/01/05/taming-the-gridbaglayout
+
 (defmacro set-grid! [constraints field value]
   `(set! (. ~constraints ~(symbol (name field)))
          ~(if (keyword? value)
@@ -222,6 +230,8 @@
 ;;Der Macro Grid-bag-layout bekommt ein Panel und mehreren Elementen und positionniert sie im Gridlayout
 ;;params container Jpanel
 ;;params body ein oder mehrere GUI-Elemente
+;;quelle: http://stuartsierra.com/2010/01/05/taming-the-gridbaglayout
+
 (defmacro grid-bag-layout [container & body]
   (let [c (gensym "c")
         cntr (gensym "cntr")]
